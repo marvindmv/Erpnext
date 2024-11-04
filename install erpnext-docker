@@ -36,6 +36,8 @@ docker compose -f pwd.yml up -d
 
 http://localhost:8080
 
+considerar al iniciar erpnext dejarlo sin datos ejemplo para que no de problemas al instalar nuevas apps.
+
 Para detener todos los contenedores, ejecute el siguiente comando:
 sudo docker stop $(sudo docker ps -q)
 
@@ -50,6 +52,7 @@ sudo docker exec -it <NAME> /bin/bash
 Reemplace <NAME> por el ID o el nombre del contenedor de Docker.
 
 Una vez que ERPNext esté instalado, agregue la aplicación hrms a su banco ejecutando
+
 sudo docker exec -it b9ef7a659f3e /bin/bash      (frontend-1)
 cd apps/
 bench get-app hrms

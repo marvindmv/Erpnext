@@ -26,7 +26,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose --version
 
-Instalacion Erpnext
+Instalacion Erpnext   https://codewithkarani.com/2024/04/06/installing-erpnext-via-docker-for-beginners-a-step-by-step-guide/
 
 git clone https://github.com/frappe/frappe_docker
 cd frappe_docker
@@ -48,6 +48,29 @@ Para ejecutar un shell interactivo dentro de un contenedor Docker en ejecución,
 sudo docker exec -it <NAME> /bin/bash
 Reemplace <NAME> por el ID o el nombre del contenedor de Docker.
 
+Una vez que ERPNext esté instalado, agregue la aplicación hrms a su banco ejecutando
+sudo docker exec -it b9ef7a659f3e /bin/bash      (frontend-1)
+cd apps/
+bench get-app hrms
+cd frappe-bench
+bench --site frontend install-app hrms
+bench version
+bench app-list
+bench list-apps
+bench migrate --skip-failing
+exit
 
+sudo docker exec -it 883f932dcf79 /bin/bash    (backend-1)
+cd apps/
+bench get-app hrms
+cd frappe-bench
+bench --site frontend install-app hrms
+bench --site frontend list-apps
+bench migrate --skip-failing
+exit
+
+sudo docker stop $(sudo docker ps -q)
+
+docker start $(docker ps -a -q)
 
 

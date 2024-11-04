@@ -27,6 +27,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 Instalacion Erpnext   https://codewithkarani.com/2024/04/06/installing-erpnext-via-docker-for-beginners-a-step-by-step-guide/
+                      https://www.youtube.com/watch?v=qz5LjuLkr8Q&ab_channel=RuruSabado
 
 git clone https://github.com/frappe/frappe_docker
 cd frappe_docker
@@ -72,5 +73,17 @@ exit
 sudo docker stop $(sudo docker ps -q)
 
 docker start $(docker ps -a -q)
+
+
+Nota: en google cloud configurar en firewall lo siguiente: en tcp: agregar a 60000	
+default-allow-http
+Entrada	
+http-server
+Intervalos de IP: 0.0.0.0/0
+tcp:80-60000
+Permitir
+1000
+default
+Desactivado
 
 

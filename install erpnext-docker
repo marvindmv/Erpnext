@@ -75,7 +75,7 @@ sudo docker stop $(sudo docker ps -q)
 docker start $(docker ps -a -q)
 
 
-Nota: en google cloud configurar en firewall lo siguiente: en tcp: agregar a 60000	
+Nota: en google cloud configurar en firewall lo siguiente: en tcp: agregar a 60000	para que acepte el puerto 8080
 default-allow-http
 Entrada	
 http-server

@@ -36,6 +36,9 @@ docker compose -f pwd.yml up -d
 
 http://localhost:8080
 
+nombre de usuario:Administrator
+contraseña: admin
+
 considerar al iniciar erpnext dejarlo sin datos ejemplo para que no de problemas al instalar nuevas apps.
 
 Para detener todos los contenedores, ejecute el siguiente comando:

@@ -1,6 +1,3 @@
-¡Claro! Aquí tienes una versión de la información convertida para un archivo README de GitHub:
-
-```markdown
 # Guía de Instalación de Docker y ERPNext
 
 Esta guía te ayudará a instalar Docker y ERPNext en tu sistema Ubuntu 22.04. Sigue los pasos a continuación para configurar todo correctamente.

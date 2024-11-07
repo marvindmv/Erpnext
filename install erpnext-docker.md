@@ -1,6 +1,6 @@
 ¡Claro! Aquí tienes una versión de la información convertida para un archivo README de GitHub:
 
-```markdown
+
 # Guía de Instalación de ERPNext en Docker
 
 Esta guía te ayudará a instalar ERPNext utilizando Docker en tu sistema. Sigue los pasos a continuación para configurar todo correctamente.
@@ -13,6 +13,7 @@ Esta guía te ayudará a instalar ERPNext utilizando Docker en tu sistema. Sigue
 - Docker Compose
 
 ## Instalación de Docker
+
 
 1. **Actualiza los paquetes del sistema**:
    ```sh

@@ -1,19 +1,11 @@
 ¡Claro! Aquí tienes una versión de la información convertida para un archivo README de GitHub:
 
+```markdown
+# Guía de Instalación de Docker y ERPNext
 
-# Guía de Instalación de ERPNext en Docker
-
-Esta guía te ayudará a instalar ERPNext utilizando Docker en tu sistema. Sigue los pasos a continuación para configurar todo correctamente.
-
-## Prerrequisitos
-
-### Requisitos de software
-- Ubuntu 22.04 o superior
-- Docker
-- Docker Compose
+Esta guía te ayudará a instalar Docker y ERPNext en tu sistema Ubuntu 22.04. Sigue los pasos a continuación para configurar todo correctamente.
 
 ## Instalación de Docker
-
 
 1. **Actualiza los paquetes del sistema**:
    ```sh
@@ -93,6 +85,9 @@ Esta guía te ayudará a instalar ERPNext utilizando Docker en tu sistema. Sigue
    - Usuario: `Administrator`
    - Contraseña: `admin`
 
+4. **Consideraciones**:
+   - Al iniciar ERPNext, es recomendable dejarlo sin datos de ejemplo para evitar problemas al instalar nuevas aplicaciones.
+
 ## Comandos Útiles
 
 - **Detener todos los contenedores**:
@@ -112,14 +107,47 @@ Esta guía te ayudará a instalar ERPNext utilizando Docker en tu sistema. Sigue
 
 - **Ejecutar un shell interactivo dentro de un contenedor Docker**:
   ```sh
-  sudo docker exec -it <nombre_del_contenedor> /bin/bash
+  sudo docker exec -it <NAME> /bin/bash
   ```
-  Reemplaza `<nombre_del_contenedor>` con el ID o el nombre del contenedor de Docker.
+  Reemplaza `<NAME>` por el ID o el nombre del contenedor de Docker.
 
-## Notas
+## Instalación de la Aplicación HRMS en ERPNext
 
-- Considera dejar ERPNext sin datos de ejemplo para evitar problemas al instalar nuevas aplicaciones.
-- En Google Cloud, configura el firewall para permitir el puerto 8080:
+1. **Accede al contenedor frontend**:
+   ```sh
+   sudo docker exec -it b9ef7a659f3e /bin/bash
+   cd apps/
+   bench get-app hrms
+   cd frappe-bench
+   bench --site frontend install-app hrms
+   bench version
+   bench app-list
+   bench list-apps
+   bench migrate --skip-failing
+   exit
+   ```
+
+2. **Accede al contenedor backend**:
+   ```sh
+   sudo docker exec -it 883f932dcf79 /bin/bash
+   cd apps/
+   bench get-app hrms
+   cd frappe-bench
+   bench --site frontend install-app hrms
+   bench --site frontend list-apps
+   bench migrate --skip-failing
+   exit
+   ```
+
+3. **Reinicia los contenedores**:
+   ```sh
+   sudo docker stop $(sudo docker ps -q)
+   docker start $(docker ps -a -q)
+   ```
+
+## Configuración de Firewall en Google Cloud
+
+- Configura el firewall para permitir el puerto 8080:
   - TCP: Agregar a 60000 para que acepte el puerto 8080.
   - Entrada: `http-server`
   - Intervalos de IP: `0.0.0.0/0`
@@ -127,7 +155,7 @@ Esta guía te ayudará a instalar ERPNext utilizando Docker en tu sistema. Sigue
   - Permitir: `1000`
   - Default: `Desactivado`
 
-Para más detalles, consulta la [guía completa](https://codewithkarani.com/2024/04/06/installing-erpnext-via-docker-for-beginners-a-step-by-step-guide/) y el [video tutorial](https://www.youtube.com/watch?v=qz5LjuLkr8Q&ab_channel=RuruSabado).
+Para más detalles, consulta la [guía completa](https://codewithkarani.com/2024/04/06/beginners-guide-to-installing-docker-on-ubuntu-22-04-a-step-by-step-tutorial/) y el [video tutorial](https://www.youtube.com/watch?v=qz5LjuLkr8Q&ab_channel=RuruSabado).
 
 ---
 

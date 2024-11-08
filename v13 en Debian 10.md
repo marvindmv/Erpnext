@@ -154,4 +154,4 @@ Lea cada línea cuidadosamente. ¡No te saltes ningún paso! En cualquier lugar 
 Espero que esto ayude, pero como siempre, ¡asegúrate de seguir cada paso cuidadosamente!
 ```
 
-¡Listo! Ahora tienes un archivo README detallado para tu instalación de ERPNext en GitHub.
+

@@ -1,6 +1,6 @@
 Sure, here's a README file for your GitHub repository:
 
-```markdown
+
 # ERPNext Installation Guide
 
 ## Table of Contents

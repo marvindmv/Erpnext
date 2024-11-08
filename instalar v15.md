@@ -1,6 +1,6 @@
 ¡Claro! Aquí tienes un archivo README de GitHub basado en la guía para instalar ERPNext versión 15 en Ubuntu 22.04:
 
-```markdown
+
 # Guía de Instalación de ERPNext Versión 15 en Ubuntu 22.04
 
 **Escrito por Karani, 31 de diciembre de 2023**

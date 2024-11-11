@@ -188,13 +188,36 @@ bench setup nginx
 sudo supervisorctl restart all
 sudo bench setup production [frappe-user]
 ```
-
-¡Todo lo mejor! 🙂
-
----
-
 Para más detalles, consulta la [guía completa](https://codewithkarani.com/2023/12/31/how-to-install-erpnext-version-15-in-ubuntu-a-step-by-step-guide/).
 ```
+# Configuración de la Tenencia Múltiple en ERPNext
+**Escrito por Karani, 24 de agosto de 2021**
+En software, la tenencia múltiple es una arquitectura en la que una sola instancia de una aplicación de software atiende a varios clientes, que se denominan inquilinos. La aplicación puede ofrecerse como un servicio o como una plataforma.
 
-Espero que esto te sea útil. Si necesitas más ayuda, aquí estoy. 🚀
-```
+## Pasos necesarios
+
+1. Configurar DNS para tenencia múltiple:
+    ```bash
+    bench config dns_multitenant on
+    ```
+2. Crear un nuevo sitio:
+    ```bash
+    bench new-site first.site
+    ```
+3. Configurar NGINX:
+    ```bash
+    sudo service nginx reload
+    ```
+4. Instalar ERPNext en el nuevo sitio:
+    ```bash
+    bench --site first.site install-app erpnext
+    ```
+5. Editar el archivo `/etc/hosts` y añadir las rutas para cada sitio:
+    ```plaintext
+    127.0.0.1 first.site
+    127.0.0.1 second.site
+    ```
+Por favor, tenga en cuenta el nombre de sus sitios. Deberá agregar una ruta para cada sitio que agregue.
+---
+
+Para más detalles, puedes visitar el artículo original en [Code con Karani](https://codewithkarani.com/2021/08/24/setting-up-multi-tenancy-in-erpnext/).

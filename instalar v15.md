@@ -189,6 +189,7 @@ sudo supervisorctl restart all
 sudo bench setup production [frappe-user]
 ```
 Para más detalles, consulta la [guía completa](https://codewithkarani.com/2023/12/31/how-to-install-erpnext-version-15-in-ubuntu-a-step-by-step-guide/).
+
 ```
 # Configuración de la Tenencia Múltiple en ERPNext
 **Escrito por Karani, 24 de agosto de 2021**

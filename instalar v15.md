@@ -82,6 +82,13 @@ sudo apt-get install libmysqlclient-dev
 sudo mysql_secure_installation
 ```
 Sigue las indicaciones para completar la configuración correctamente.
+- Enter current password for root: (Enter your SSH root user password)
+- Switch to unix_socket authentication [Y/n]: Y
+- Change the root password? [Y/n]: Y
+- Remove anonymous users? [Y/n] Y
+- Disallow root login remotely? [Y/n]: N
+- Remove test database and access to it? [Y/n]: Y
+- Reload privilege tables now? [Y/n]: Y
 
 #### Editar el Archivo de Configuración Predeterminado de MYSQL
 ```sh

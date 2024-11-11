@@ -198,19 +198,19 @@ En software, la tenencia múltiple es una arquitectura en la que una sola instan
 ## Pasos necesarios
 
 1. Configurar DNS para tenencia múltiple:
-    ```bash
+    ```sh
     bench config dns_multitenant on
     ```
 2. Crear un nuevo sitio:
-    ```bash
+    ```sh
     bench new-site first.site
     ```
 3. Configurar NGINX:
-    ```bash
+    ```sh
     sudo service nginx reload
     ```
 4. Instalar ERPNext en el nuevo sitio:
-    ```bash
+    ```sh
     bench --site first.site install-app erpnext
     ```
 5. Editar el archivo `/etc/hosts` y añadir las rutas para cada sitio:

@@ -190,7 +190,7 @@ sudo bench setup production [frappe-user]
 ```
 Para más detalles, consulta la [guía completa](https://codewithkarani.com/2023/12/31/how-to-install-erpnext-version-15-in-ubuntu-a-step-by-step-guide/).
 
-
+ ```
 # Configuración de la Tenencia Múltiple en ERPNext
 **Escrito por Karani, 24 de agosto de 2021**
 En software, la tenencia múltiple es una arquitectura en la que una sola instancia de una aplicación de software atiende a varios clientes, que se denominan inquilinos. La aplicación puede ofrecerse como un servicio o como una plataforma.

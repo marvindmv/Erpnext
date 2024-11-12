@@ -221,13 +221,13 @@ sudo service nginx reload
 ```sh
 bench --site first.site install-app erpnext
 ```
-### 5. Editar el archivo `/etc/hosts` y añadir las rutas para cada sitio:
+#### 5. Editar el archivo `/etc/hosts` y añadir las rutas para cada sitio:
 ```plaintext
 127.0.0.1 first.site
 127.0.0.1 second.site
 ```
-Por favor, tenga en cuenta el nombre de sus sitios. Deberá agregar una ruta para cada sitio que agregue.
-Para más detalles, puedes visitar el artículo original en [Code con Karani](https://codewithkarani.com/2021/08/24/setting-up-multi-tenancy-in-erpnext/).
+#### Por favor, tenga en cuenta el nombre de sus sitios. Deberá agregar una ruta para cada sitio que agregue.
+#### Para más detalles, puedes visitar el artículo original en [Code con Karani](https://codewithkarani.com/2021/08/24/setting-up-multi-tenancy-in-erpnext/).
 ---
 
 

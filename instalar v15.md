@@ -251,6 +251,12 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```sh
 sudo certbot --nginx
 ```
+###Elimine los sitios nginx estándar. Para evitar conflictos y evitar vunlerabidades de seguridad  
+```sh
+sudo rm /etc/nginx/sites-available/default
+sudo rm /etc/nginx/sites-enabled/default
+
+```
 
 ####**Una vez hecho esto, puede cerrar su cliente SSH, abrir un navegador y escribir la URL de su servidor en la barra de direcciones para acceder a la versión segura de su servidor ERPNext.**
 

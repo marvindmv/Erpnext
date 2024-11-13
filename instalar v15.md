@@ -229,5 +229,32 @@ bench --site first.site install-app erpnext
 #### Por favor, tenga en cuenta el nombre de sus sitios. Deberá agregar una ruta para cada sitio que agregue.
 #### Para más detalles, puedes visitar el artículo original en [Code con Karani](https://codewithkarani.com/2021/08/24/setting-up-multi-tenancy-in-erpnext/).
 ---
+ # **Instale y configure Certbot para SSL:**
+```sh
+sudo apt-get remove certbot
+```
+```sh
+sudo apt install snapd
+```
+```sh
+sudo snap install core
+```
+```sh
+sudo snap refresh core
+```
+```sh
+sudo snap install --classic certbot
+```
+```sh
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+```sh
+sudo certbot --nginx
+```
+
+####**Una vez hecho esto, puede cerrar su cliente SSH, abrir un navegador y escribir la URL de su servidor en la barra de direcciones para acceder a la versión segura de su servidor ERPNext.**
+
+####**Nota final:**
+####    Este método específicamente NO cambia el nombre de banco o los directorios del sitio para brindar flexibilidad más adelante en caso de que necesite tener varias URL que apunten a la misma instancia de ERPNext o si necesita cambiar su URL por algún motivo en el futuro. Usar el `bench setup add-domain` comando hace que esto sea mucho más simple. Las instrucciones del certificado SSL proporcionadas están diseñadas para admitir esta configuración.
 
 

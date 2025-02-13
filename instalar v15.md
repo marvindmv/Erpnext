@@ -263,4 +263,4 @@ sudo rm /etc/nginx/sites-enabled/default
 ####**Nota final:**
 ####    Este método específicamente NO cambia el nombre de banco o los directorios del sitio para brindar flexibilidad más adelante en caso de que necesite tener varias URL que apunten a la misma instancia de ERPNext o si necesita cambiar su URL por algún motivo en el futuro. Usar el `bench setup add-domain` comando hace que esto sea mucho más simple. Las instrucciones del certificado SSL proporcionadas están diseñadas para admitir esta configuración.
 
-
+https://copilot.microsoft.com/shares/QzvytAqtc4SJgyMFi5yjW

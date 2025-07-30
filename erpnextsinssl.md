@@ -2,7 +2,7 @@
 
 Este procedimiento permite revertir la configuración SSL en ERPNext y restaurar el servicio Supervisor para entornos sin HTTPS.
 
-
+Eliminar lineas en circulo 
 <img width="919" height="679" alt="image" src="https://github.com/user-attachments/assets/b9a20707-c53b-46ab-8d59-e13fa038265a" />
 
 # sustituir en archivo : nginx.conf

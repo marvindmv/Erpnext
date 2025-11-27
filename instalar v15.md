@@ -257,6 +257,11 @@ sudo rm /etc/nginx/sites-available/default
 sudo rm /etc/nginx/sites-enabled/default
 
 ```
+### para registrar un certificado ssl al sitio nuevo solo este codigo
+```sh
+sudo certbot --nginx -d adescopas.erpcorad.xyz
+
+```
 
 ####**Una vez hecho esto, puede cerrar su cliente SSH, abrir un navegador y escribir la URL de su servidor en la barra de direcciones para acceder a la versión segura de su servidor ERPNext.**
 

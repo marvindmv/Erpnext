@@ -269,3 +269,14 @@ sudo certbot --nginx -d adescopas.erpcorad.xyz
 ####    Este método específicamente NO cambia el nombre de banco o los directorios del sitio para brindar flexibilidad más adelante en caso de que necesite tener varias URL que apunten a la misma instancia de ERPNext o si necesita cambiar su URL por algún motivo en el futuro. Usar el `bench setup add-domain` comando hace que esto sea mucho más simple. Las instrucciones del certificado SSL proporcionadas están diseñadas para admitir esta configuración.
 
 https://copilot.microsoft.com/shares/BHV2XHXvYjJB5SX1tiCph
+
+
+```
+###* Habilita los script de cliente y servidor*
+```sh
+
+bench set-config -g server_script_enabled 1
+
+
+
+

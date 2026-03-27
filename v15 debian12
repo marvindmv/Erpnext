@@ -1,21 +1,11 @@
 
-# Guía de Instalación de ERPNext Versión 15 en Ubuntu 22.04
+# Guía de Instalación de ERPNext Versión 15 en debian12
 
-**Escrito por Karani, 31 de diciembre de 2023**
 
-En este artículo, te guiaré paso a paso para configurar nuestro recién instalado sistema operativo Ubuntu 22.04 y preparar el entorno para instalar ERPNext versión 15. ¡Manos a la obra!
+En este artículo, te guiaré paso a paso para configurar nuestro recién instalado sistema operativo 
 
 ## Prerrequisitos
 
-### Requisitos de Software
-- Ubuntu 22.04 actualizado
-- Un usuario con privilegios sudo
-- Python 3.10+
-- Node.js 18
-
-### Requisitos de Hardware
-- 4GB de RAM
-- Disco duro de 40GB
 
 ## Configuración del Servidor
 
